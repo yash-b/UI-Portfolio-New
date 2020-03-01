@@ -72,6 +72,19 @@ input, select, textarea {
 	appearance: none;
 }
 
+.hover-colorize {
+	overflow: hidden;
+}
+
+.hover-colorize img {
+	transition: transform .75s ease;
+}
+  
+/* [3] Finally, transforming the image when container gets hovered */
+.hover-colorize:hover img {
+transform: scale(1.5);
+}
+
 /* Basic */
 
 	html {
@@ -98,7 +111,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: rgb(52, 36, 10);
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -122,7 +135,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #787878;
+		color: rgb(0,0,0);
 		font-weight: 400;
 	}
 
@@ -135,7 +148,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color: rgb(52, 36, 10);
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -213,6 +226,7 @@ input, select, textarea {
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
+		
 	}
 
 	pre {
@@ -2445,8 +2459,8 @@ input, select, textarea {
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 0.35em;
-		border: solid 3px #efefef;
-		color: #787878 !important;
+		border: solid 3px rgb(52, 36, 10);
+		color: rgb(52, 36, 10) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
@@ -2472,8 +2486,8 @@ input, select, textarea {
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		.button:active {
-			background-color: rgba(73, 191, 157, 0.1);
-			border-color: #49bf9d;
+			background-color: rgb(15, 54, 103);
+			border-color: rgb(73, 191, 157);
 			color: #49bf9d !important;
 		}
 
@@ -2519,7 +2533,7 @@ input, select, textarea {
 		.button.primary {
 			background-color: #49bf9d;
 			border-color: #49bf9d;
-			color: #ffffff !important;
+			color: rgb(15, 54, 103) !important;
 		}
 
 			input[type="submit"].primary:hover,
@@ -2546,7 +2560,7 @@ input, select, textarea {
 		.button.disabled,
 		.button:disabled {
 			background-color: #e7e7e7 !important;
-			border-color: #e7e7e7 !important;
+			border-color: black !important;
 			color: #b2b2b2 !important;
 			cursor: default;
 		}
