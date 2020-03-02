@@ -10,6 +10,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+		<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
 
 		<!-- Header -->
 			<header id="header">
@@ -42,38 +45,48 @@
 				<!-- Two -->
 				<!-- Thumbnail dimension: 370 × 217 -->
 					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="hover-colorize">
-							<div class="row">
+						<h2>Project Showcase</h2>
+						<div class="row">
+							<div class="hover-colorize-zoom">
 								<article class="col-6 col-12-xsmall work-item">
 									<a href="images/fulls/01.jpg" class="image fit thumb" target="_blank"><img src="images/thumbs/01.jpg" alt="" /></a>
-									<h3>Magna sed consequat tempus</h3>
-									<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+									<h3>01Magna sed consequat tempus</h3>
+									<p>01Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 								</article>
+							</div>
+							<div class="hover-colorize-zoom">
 								<article class="col-6 col-12-xsmall work-item">
 									<a href="images/fulls/02.jpg" class="image fit thumb" target="_blank"><img src="images/thumbs/02.jpg" alt="" /></a>
-									<h3>Ultricies lacinia interdum</h3>
-									<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+									<h3>02Magna sed consequat tempus</h3>
+									<p>02Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 								</article>
+							</div>
+							<div class="hover-colorize-zoom">
 								<article class="col-6 col-12-xsmall work-item">
-									<a href="images/fulls/03.jpg" class="image fit thumb" target="_blank"><img src="images/thumbs/03.jpg" alt="" /></a>
-									<h3>Tortor metus commodo</h3>
-									<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+									<a href="https://github.com/yash-b/crossyRoads" class="image fit thumb" target="_blank"><img src="images/thumbs/03.jpg" alt="" /></a>
+									<h3>Crossy Roads - <i>Academic Project</i></h3>
+									<p>Recreated the simplified version of the famous mobile game Crossy Roads in Unreal Engine, and implemented most of its functionalities.</p>
 								</article>
+							</div>
+							<div class="hover-colorize-zoom">
 								<article class="col-6 col-12-xsmall work-item">
-									<a href="images/fulls/04.jpg" class="image fit thumb" target="_blank"><img src="images/thumbs/04.jpg" alt="" /></a>
-									<h3>Quam neque phasellus</h3>
-									<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+									<a href="https://github.com/yash-b/Connect4AI" class="image fit thumb" target="_blank"><img src="images/thumbs/04.jpg" alt="" /></a>
+									<h3>Connect 4 AI - <i>Academic Project</i></h3>
+									<p>Connect4 AI is a PvP and a PvAI Connect 4 game, where the primary goal is to connect 4 pieces of the same color in vertical, horizontal or diagnol slots. This game uses Mini-Max Game thoery and also utilizes Alpha-Beta Pruning algorithm to decide the next best move.</p>
 								</article>
+							</div>
+							<div class="hover-colorize-zoom">
 								<article class="col-6 col-12-xsmall work-item">
-									<a href="images/fulls/05.jpg" class="image fit thumb" target="_blank"><img src="images/thumbs/05.jpg" alt="" /></a>
-									<h3>Nunc enim commodo aliquet</h3>
-									<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+									<a href="projects/ottergram/index.html" class="image fit thumb" target="_blank"><img src="images/thumbs/05.jpg" alt="" /></a>
+									<h3>Ottergram - <i>Academic Project</i></h3>
+									<p>It's Instagram, but for Otters! Who wants to see insta models, and famous people showing off their amazing lifestyles, when you can see cute pictures of otters!</p>
 								</article>
+							</div>
+							<div class="hover-colorize-zoom">
 								<article class="col-6 col-12-xsmall work-item">
 									<a href="assets/files/gd-portfolio.pdf" class="image fit thumb" target="_blank"><img src="images/thumbs/06.jpg" alt="" /></a>
 									<h3>Graphic Design Projects</h3>
-									<p>This is a little something I created to compile almost every digital media I ever created.</p>
+									<p>My Graphic Designing Portfolio, consisting of almost every graphic project I worked on in school.</p>
 								</article>
 							</div>
 						</div>
@@ -85,16 +98,16 @@
 						<p>If you have any questions or comments about who I am, what I stand for, or just want to get to know me, fill this out and I will get back to you as soon as I possibly can.</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="#">
+								<form method="post" id="contactform">
+									<div class="alert">Your message has been sent.</div>
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
+									<!-- <li><input type="submit"></li> -->
+									<button type="submit" class="button" style="margin-top: 15px;">Submit</button></li>
+							</form>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
@@ -439,10 +452,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="https://www.facebook.com/RockInPeace.xD" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="https://github.com/yash-b" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="https://www.linkedin.com/in/yash-bhambhani-31288a17b/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/yash-b" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="mailto:bhambhani.yash@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.facebook.com/RockInPeace.xD" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; Yash-B</li><li>Design: <a href="http://github.com/yash-b/yash-b.github.io">Repo Link</a></li>
@@ -451,12 +464,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			</footer>
 
 		<!-- Scripts -->
+			<script src="assets/js/formsubmit.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
 
 	</body>
 </html>

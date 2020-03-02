@@ -1,11 +1,7 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+	/* Template: Strata (CCA 3.0 license) */
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -72,17 +68,29 @@ input, select, textarea {
 	appearance: none;
 }
 
-.hover-colorize {
-	overflow: hidden;
+.hover-colorize-zoom {
+	width: 50%;
+	padding: 50px;
 }
 
-.hover-colorize img {
-	transition: transform .75s ease;
+.hover-colorize-zoom img {
+	transition: transform 0.75s, filter 0.75s ease-in-out;
+  	filter: grayscale(100%);
 }
   
-/* [3] Finally, transforming the image when container gets hovered */
-.hover-colorize:hover img {
-transform: scale(1.5);
+.hover-colorize-zoom:hover img {
+	filter: grayscale(0);
+	transform: scale(1.1)
+}
+
+.alert {
+	display: none;
+	text-align: center;
+	opacity: 0.75;
+	background: rgb(52, 36, 10);
+	color: #fff;
+	padding: 10px;
+	margin-bottom: 10px;
 }
 
 /* Basic */
@@ -2027,6 +2035,7 @@ transform: scale(1.5);
 			font-style: normal;
 			font-variant: normal;
 			text-rendering: auto;
+			/* color: rgb(52, 36, 10); */
 			line-height: 1;
 			text-transform: none !important;
 			font-family: 'Font Awesome 5 Free';
